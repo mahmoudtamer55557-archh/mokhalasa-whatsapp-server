@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: mokhalasa-whatsapp-server
+    runtime: node
+    plan: free
+    region: frankfurt
+    buildCommand: npm install
+    startCommand: node server.js
+    envVars:
+      - key: PORT
+        value: 3001
+      - key: API_KEY
+        value: mokhalasa_secret_otp_key_2026
